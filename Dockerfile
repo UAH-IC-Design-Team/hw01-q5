@@ -20,11 +20,15 @@ RUN git clone https://github.com/UAH-IC-Design-Team/hw01-q5-application.git
 WORKDIR /app/hw01-q5-application
 RUN make
 
+#FROM alpine
+FROM alpine
 #FROM purplei2p/i2pd:latest
-FROM build as execute
-#WORKDIR /app
+#FROM build as execute
+WORKDIR /app
+#COPY --from=build /app/build ./
+RUN apk add libstdc++
 COPY --from=build /app/hw01-q5-application/hw01-q5-application ./
-#RUN apk add g++
+
 
 ENTRYPOINT ["./hw01-q5-application"]
 
