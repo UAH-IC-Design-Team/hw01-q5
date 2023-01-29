@@ -11,3 +11,4 @@ RUN make
 FROM build1 as build2
 RUN apd add libstdc++
 COPY --from=build_1 /hw01-q5-application/hw01-q5-application
+CMD ["./hw01-q5-application.cpp"]
