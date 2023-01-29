@@ -17,4 +17,4 @@ WORKDIR /apptest
 RUN ls -a
 COPY --from=build1 /hw01-q5-application/hw01-q5-application /apptest
 RUN ls -a
-CMD ["./hw01-q5-application.cpp"]
+CMD ["./hw01-q5-application"]
