@@ -6,7 +6,7 @@ RUN apk add --no-cache git
 # Somewhere in this file, the following line must be included:
 RUN git clone https://github.com/UAH-IC-Design-Team/hw01-q5-application.git
 WORKDIR hw01-q5-application
-RUN make
+RUN make ./hw01-q5-application
 
 FROM build1 as build2
 RUN apd add libstdc++
