@@ -14,6 +14,6 @@ RUN apk add libstdc++
 RUN ls -a
 WORKDIR /apptest
 RUN ls -a
-COPY --from=build_1 /hw01-q5-application/hw01-q5-application /apptest
+COPY --from=build1 /hw01-q5-application/hw01-q5-application /apptest
 RUN ls -a
 CMD ["./hw01-q5-application.cpp"]
